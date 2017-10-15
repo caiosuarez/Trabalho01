@@ -68,6 +68,7 @@ public class TelaFuncionario {
         case 2:
             System.out.println("Digite a matricula do Funcionario que deseja alterar o Cargo");
             int matricula = sc.nextInt();
+            
             ctrlFunc.alterarCargoFuncionarioPelaMatricula(matricula, cargo);
             break;
         case 3:

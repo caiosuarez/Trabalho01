@@ -35,10 +35,15 @@ public class TelaCargo {
             System.out.println("0 - Voltar");
             System.out.println("Selecione uma opção:");
             opcao = sc.nextInt();
-            trataOpcao(opcao);
+            try {
+                trataOpcao(opcao);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            
         } while(opcao != -1);
     }
-    public void trataOpcao(int opcao) {
+    public void trataOpcao(int opcao) throws CadastroIncorretoException {
         switch(opcao){
         case 1:
             telaCadastraCargo();
